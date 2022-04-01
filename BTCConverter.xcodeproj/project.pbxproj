@@ -11,8 +11,9 @@
 		3AEB7E3C27F6CDDD006BCDFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB7E3B27F6CDDD006BCDFA /* ContentView.swift */; };
 		3AEB7E3E27F6CDDF006BCDFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AEB7E3D27F6CDDF006BCDFA /* Assets.xcassets */; };
 		3AEB7E4127F6CDDF006BCDFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AEB7E4027F6CDDF006BCDFA /* Preview Assets.xcassets */; };
-		3AEB7E4327F6CDDF006BCDFA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB7E4227F6CDDF006BCDFA /* Persistence.swift */; };
-		3AEB7E4627F6CDDF006BCDFA /* BTCConverter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB7E4427F6CDDF006BCDFA /* BTCConverter.xcdatamodeld */; };
+		3AEB7E4D27F6EBEE006BCDFA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB7E4C27F6EBEE006BCDFA /* APIManager.swift */; };
+		3AEB7E5027F6FD07006BCDFA /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB7E4F27F6FD07006BCDFA /* CoinData.swift */; };
+		3AEB7E5427F70A85006BCDFA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB7E5327F70A85006BCDFA /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,8 +22,11 @@
 		3AEB7E3B27F6CDDD006BCDFA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3AEB7E3D27F6CDDF006BCDFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AEB7E4027F6CDDF006BCDFA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3AEB7E4227F6CDDF006BCDFA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		3AEB7E4527F6CDDF006BCDFA /* BTCConverter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BTCConverter.xcdatamodel; sourceTree = "<group>"; };
+		3AEB7E4C27F6EBEE006BCDFA /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		3AEB7E4F27F6FD07006BCDFA /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
+		3AEB7E5327F70A85006BCDFA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3AEB7E5527F710BA006BCDFA /* ReadME.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadME.md; sourceTree = "<group>"; };
+		3AEB7E5727F714BF006BCDFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 		3AEB7E2D27F6CDDD006BCDFA = {
 			isa = PBXGroup;
 			children = (
+				3AEB7E5527F710BA006BCDFA /* ReadME.md */,
 				3AEB7E3827F6CDDD006BCDFA /* BTCConverter */,
 				3AEB7E3727F6CDDD006BCDFA /* Products */,
 			);
@@ -55,11 +60,11 @@
 		3AEB7E3827F6CDDD006BCDFA /* BTCConverter */ = {
 			isa = PBXGroup;
 			children = (
-				3AEB7E3927F6CDDD006BCDFA /* BTCConverterApp.swift */,
-				3AEB7E3B27F6CDDD006BCDFA /* ContentView.swift */,
+				3AEB7E5727F714BF006BCDFA /* Info.plist */,
+				3AEB7E5227F70A71006BCDFA /* Supporting files */,
+				3AEB7E5127F70A21006BCDFA /* View */,
+				3AEB7E4E27F6FCEF006BCDFA /* Model */,
 				3AEB7E3D27F6CDDF006BCDFA /* Assets.xcassets */,
-				3AEB7E4227F6CDDF006BCDFA /* Persistence.swift */,
-				3AEB7E4427F6CDDF006BCDFA /* BTCConverter.xcdatamodeld */,
 				3AEB7E3F27F6CDDF006BCDFA /* Preview Content */,
 			);
 			path = BTCConverter;
@@ -71,6 +76,32 @@
 				3AEB7E4027F6CDDF006BCDFA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3AEB7E4E27F6FCEF006BCDFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3AEB7E4C27F6EBEE006BCDFA /* APIManager.swift */,
+				3AEB7E4F27F6FD07006BCDFA /* CoinData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3AEB7E5127F70A21006BCDFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3AEB7E3B27F6CDDD006BCDFA /* ContentView.swift */,
+				3AEB7E3927F6CDDD006BCDFA /* BTCConverterApp.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3AEB7E5227F70A71006BCDFA /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				3AEB7E5327F70A85006BCDFA /* Constants.swift */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,9 +174,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AEB7E4327F6CDDF006BCDFA /* Persistence.swift in Sources */,
+				3AEB7E5427F70A85006BCDFA /* Constants.swift in Sources */,
+				3AEB7E5027F6FD07006BCDFA /* CoinData.swift in Sources */,
 				3AEB7E3C27F6CDDD006BCDFA /* ContentView.swift in Sources */,
-				3AEB7E4627F6CDDF006BCDFA /* BTCConverter.xcdatamodeld in Sources */,
+				3AEB7E4D27F6EBEE006BCDFA /* APIManager.swift in Sources */,
 				3AEB7E3A27F6CDDD006BCDFA /* BTCConverterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,11 +312,12 @@
 				DEVELOPMENT_TEAM = MK8LDS6W26;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BTCConverter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,11 +342,12 @@
 				DEVELOPMENT_TEAM = MK8LDS6W26;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BTCConverter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -349,19 +383,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		3AEB7E4427F6CDDF006BCDFA /* BTCConverter.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				3AEB7E4527F6CDDF006BCDFA /* BTCConverter.xcdatamodel */,
-			);
-			currentVersion = 3AEB7E4527F6CDDF006BCDFA /* BTCConverter.xcdatamodel */;
-			path = BTCConverter.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 3AEB7E2E27F6CDDD006BCDFA /* Project object */;
 }
